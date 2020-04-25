@@ -1,0 +1,19 @@
+<% icon_sizes = Rails.configuration.serviceworker.icon_sizes %>
+{
+  "name": "SpotCodeV2 - Music App",
+  "short_name": "SpotCodeV2",
+  "start_url": "/",
+  "icons": [
+  <% icon_sizes.map { |s| "#{s}x#{s}" }.each.with_index do |dim, i| %>
+    {
+      "src": "<%= image_path "serviceworker-rails/heart-#{dim}.png" %>",
+      "sizes": "<%= dim %>",
+      "type": "image/png"
+    }<%= i == (icon_sizes.length - 1) ? "" : "," %>
+  <% end %>
+  ],
+  "theme_color": "#2222222",
+  "background_color": "#444444",
+  "display": "fullscreen",
+  "orientation": "portrait"
+}
