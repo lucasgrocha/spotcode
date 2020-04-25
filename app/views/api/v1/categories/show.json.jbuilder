@@ -14,7 +14,7 @@ json.artists @category.artists.each do |artist|
   json.photo_url url_for(artist.photo)
 end
 
-json.album @category.albums.each do |album|
+json.albums @category.albums.each do |album|
   json.id album.id
   json.name album.title
   json.cover_url url_for(album.cover)
