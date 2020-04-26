@@ -1,6 +1,8 @@
 json.title @album.title
 json.cover_url url_for(@album.cover)
 json.artist_name @album.artist.name
+json.id @album.id
+json.favorite current_user.is_favorite? 'Album', @album.id
 
 json.songs @album.songs.each do |song|
   json.id song.id
