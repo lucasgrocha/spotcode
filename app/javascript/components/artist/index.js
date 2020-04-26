@@ -11,7 +11,11 @@ const DivVSpaced = styled.div`
   margin-bottom: 20px;
 `
 
-const Artist = (props) => {
+const HeadSpaced = styled(Heading)`
+  margin-top: 100px;
+`
+
+const Artist = () => {
   let { id } = useParams()
   const [artist, setArtist] = useState([]);
   const [albums, setAlbums] = useState([]);
@@ -42,9 +46,11 @@ const Artist = (props) => {
           </DivVSpaced>
         </Columns.Column>
       </Columns>
+      <HeadSpaced size={4} className='has-text-white'>Albums</HeadSpaced>
       <Columns className='is-mobile'>
-        { artistAlbums }
+        {artistAlbums}
       </Columns>
+      <HeadSpaced size={4} className='has-text-white'>Todas as músicas</HeadSpaced>
       <Musics songs={artist['songs'] || []} />
     </Fragment>
   );
