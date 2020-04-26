@@ -1,7 +1,7 @@
 import Api from './api';
 
-const ArtistsService = {
+const ArtistService = {
   show: (id) => Api.get(`/artists/${id}`)
 }
 
-export default ArtistsService;
+export default ArtistService;

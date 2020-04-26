@@ -1,4 +1,5 @@
-json.artist_name @artist.name
+json.name @artist.name
+json.photo_url url_for(@artist.photo)
 
 json.albums @albums.each do |album|
   json.id album.id
@@ -6,7 +7,7 @@ json.albums @albums.each do |album|
   json.cover_url url_for(album.cover)
 end
 
-json.albums @albums.each do |album|
+@albums.each do |album|
   json.id album.id
   json.name album.title
   json.cover_url url_for(album.cover)

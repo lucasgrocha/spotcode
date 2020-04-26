@@ -10,7 +10,7 @@ const DivVSpaced = styled.div`
 const Artist = (props) => {
   console.log(props)
   return(
-    <Link to={`api/v1/artists/${props.id}`}>
+    <Link to={`/artist/${props.id}`}>
       <Image src={props.photo_url} className='image is-square' />
       <DivVSpaced>
         <Heading size={6} className='has-text-white'>{props.name}</Heading>
