@@ -8,8 +8,7 @@ end
 
 json.artists @favorites_artists.each do |artist|
   json.id artist.id
-  json.title artist.name
-  json.artist_name artist.artist.name
+  json.name artist.name
   json.photo_url url_for(artist.photo)
 end
 

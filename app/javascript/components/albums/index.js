@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import AlbumsService from '../../services/albums'
 import { useParams } from 'react-router-dom'
 import Musics from '../musics'
+import Favorite from '../common/favorite'
 
 const DivVSpaced = styled.div`
   margin-top: 20px;
@@ -31,6 +32,9 @@ const Albums = () => {
           <Heading size={5} className='has-text-white'>{album.title}</Heading>
           <Heading size={6} subtitle className='has-text-white'>{album.artist_name}</Heading>
         </DivVSpaced>
+          { album.id && 
+            <Favorite id={album.id} kind='albums' favored={album.favorite}/>
+          }
       </Columns.Column>
     </Columns>
     <Musics songs={album.songs || []}/>
