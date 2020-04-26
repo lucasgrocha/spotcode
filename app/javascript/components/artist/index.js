@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import ArtistService from '../../services/artist'
 import Musics from '../musics';
 import Album from '../common/album'
+import Favorite from '../common/favorite'
 
 const DivVSpaced = styled.div`
   margin-top: 20px;
@@ -44,6 +45,9 @@ const Artist = () => {
           <DivVSpaced>
             <Heading size={6} className='has-text-white'>{artist.name}</Heading>
           </DivVSpaced>
+          { artist.id &&
+            <Favorite id={artist.id} kind='artists' favored={artist.favorite} />
+          }
         </Columns.Column>
       </Columns>
       <HeadSpaced size={4} className='has-text-white'>Albums</HeadSpaced>

@@ -28,6 +28,10 @@ Rails.application.routes.draw do
       resources :albums, only: [] do
         concerns :favoritable, favoritable_type: 'Album'
       end
+
+      resources :artists, only: [] do
+        concerns :favoritable, favoritable_type: 'Artist'
+      end
     end
   end
 

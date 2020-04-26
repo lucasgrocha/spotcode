@@ -14,7 +14,6 @@ const RoundedImage = styled(Image)`
 `
 
 const Artist = (props) => {
-  console.log(props)
   return(
     <Link to={`/artist/${props.id}`}>
       <RoundedImage src={props.photo_url} className='image is-square' />
