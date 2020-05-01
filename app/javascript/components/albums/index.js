@@ -33,7 +33,7 @@ const Albums = () => {
           <Heading size={6} subtitle className='has-text-white'>{album.artist_name}</Heading>
         </DivVSpaced>
           { album.id && 
-            <Favorite id={album.id} kind='albums' favored={album.favorite}/>
+            <Favorite id={album.id} kind='albums' favored={album.favorite} title={album.title}/>
           }
       </Columns.Column>
     </Columns>

@@ -46,7 +46,7 @@ const Artist = () => {
             <Heading size={6} className='has-text-white'>{artist.name}</Heading>
           </DivVSpaced>
           { artist.id &&
-            <Favorite id={artist.id} kind='artists' favored={artist.favorite} />
+            <Favorite id={artist.id} kind='artists' favored={artist.favorite} title={artist.name}/>
           }
         </Columns.Column>
       </Columns>
